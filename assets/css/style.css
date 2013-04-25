@@ -1,0 +1,713 @@
+/* Base Styles */
+body{
+    background:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    overflow-x:hidden;
+}
+
+a,a:visited{
+    text-decoration:none;
+    color:#666;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding-bottom:8px;
+}
+
+h1{font-size:27px;color:#0b77bb;font-weight: bold;}
+h1.gray{font-size:29px;color:#666;font-weight: bold;padding-bottom:5px;}
+h2{font-size:24px;}
+h2.center{text-align:center;}
+h3{font-size:19px;color:#0b77bb;}
+h4{font-size:14px;color:#0b77bb}
+h5{font-size:14px;}
+h6{font-size:12px;}
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    
+}
+
+p{
+    margin:5px 0;
+}
+
+/* Clearing Div */
+.clr{clear:both}
+
+/* Image Borders */
+img.border{
+     padding:2px;
+    border:#ccc solid 1px;
+}
+
+strong{
+    font-weight: bold;
+}
+
+/* All Side Modules */
+.side-module{
+    margin-bottom:15px;
+    overflow:auto;
+}
+
+/* Forms */
+input[type='text'],input[type='password'],input[type='email'],input[type='date']{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+     border-radius: 5px;
+     border:1px #ccc solid;
+     padding:3px;
+     height:20px;
+     width:190px;
+}
+
+textarea{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding:3px;
+    border:1px solid #ccc;
+}
+    
+select{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+     border-radius: 5px;
+     padding:3px;
+     border:1px solid #ccc;
+}
+
+
+/* Main Template Styles */
+#container{
+    width:960px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+}
+
+#outside{
+    width:960px;
+    margin:15px auto;
+    position:relative;
+    overflow:hidden;
+    border:#ccc solid 1px;
+    border-radius: 10px;
+    min-height:400px;
+    padding:10px 10px 30px 10px;
+}
+
+/* Header */
+header{
+    overflow:hidden;
+    height:66px;
+    background:url(../images/header_bg.jpg) repeat-x;
+}
+
+header #logo{
+    float:left;
+    margin-top:10px;
+    margin-left:4px;
+}
+
+header #login{
+    float:right;
+    margin-top:10px;
+}
+
+header #login input#login-email{
+    background: #fff url(../images/login_email.png) no-repeat 5px 7px;
+    padding-left:25px;
+    margin-right:7px;
+}
+
+header #login input#login-password{
+    background: #fff url(../images/login_password.png) no-repeat 5px 5px;
+    padding-left:25px;
+     margin-right:7px;
+}
+
+header #login #login-links{
+    color:#fff;
+    font-size:85%;
+    float:right;
+    margin:3px 75px 0 0;
+}
+
+header #login input[type="checkbox"]{
+    margin:0;
+    padding:0;
+    vertical-align: middle;
+}
+
+header #login #login-links a{
+    color:#fff;
+}
+
+header #logout{
+    float:right;
+    margin-top:10px;
+    color:#58b2eb;
+}
+
+header #logout a{
+    color:#fff;
+    line-height:1.8em;
+}
+
+header #logout .logout-left{
+    float:left;
+    margin-right:15px;
+}
+
+header #logout .logout-mid{
+    float:left;
+    margin-right:15px;
+}
+
+header #logout .logout-right{
+    float:right;
+}
+
+header #logout .logout-image{
+    width:40px;
+    height:auto;
+}
+
+header #logout a.edit-profile{
+    padding-left:20px;
+    background:url('../images/edit-profile.png') no-repeat;
+}
+
+
+/* Main Navigation */
+nav#main{
+    background:url(../images/nav_bg.jpg) repeat-x;
+    height:40px;
+    overflow:hidden;
+    font-size:15px;
+}
+
+nav#main ul li{
+    float:left;
+    padding:0 10px 0 10px;
+    border-right:#ccc dotted 1px;
+}
+
+nav#main ul{
+    padding-top:10px;
+}
+
+/* Select Main Navigation */
+#select-nav{
+    display:none;
+}
+
+
+/* Main Column */
+#main-col-100{
+    width:100%;
+    padding:10px;
+}
+
+#main-col{
+    float:left;
+    width:65%;
+    padding:10px;
+}
+
+/* Sidebar */
+aside{
+    float:right;
+    width:30%;
+    padding:10px;
+}
+
+/* Footer Styles */
+footer{
+    overflow:hidden;
+}
+
+footer nav{
+    padding:10px 0;
+    overflow:hidden;
+    background:#dddcdc;
+}
+
+footer nav ul li{
+    float:left;
+    padding:0 10px;
+}
+
+footer nav a{
+    color:#666;
+    text-decoration: none;
+}
+
+#wrapper{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+footer{
+    padding:10px;
+    text-align: center;
+    background:#dddcdc;
+    height:80px;
+}
+
+footer #footer-left{
+    float:left;
+     margin-top:20px;
+}
+
+footer #footer-right{
+    float:right;
+    margin-top:25px;
+    margin-right:4px;
+}
+
+
+/* iPads/Tablets (portrait & landscape) ----------- */
+@media only screen
+and (max-width : 768px){
+
+    #container{
+        width:750px;
+        margin:0;
+    }
+
+     #outside{
+        width:700px;
+    }
+
+    #main-col{
+        width:91% !important;
+    }
+
+
+    header #login{
+        float:left;
+        margin-left:30px;
+    }
+
+    header #login input[type="text"],header #login input[type="password"]{
+       width:150px;
+    }
+
+    #main-col-100{
+        width:90%;
+    }
+    
+}
+
+
+
+/* Large Smartphones/Razr Maxx (landscape) ----------- */
+@media only screen
+and (max-width : 600px)
+and (min-width : 481px){
+
+    #container{
+        width:590px !important;
+    }
+
+    #outside{
+        width:580px;
+    }
+
+    header{
+        height:140px;
+    }
+
+    #logo{
+        float:none;
+        margin-bottom:25px;
+    }
+
+    header #login{
+        clear:both;
+        float:none !important;
+        height:60px;
+        overflow:hidden;
+        margin-left:14% !important;
+    }
+
+    header #login #login-links,header #login #login-links a{
+        color:#000;
+    }
+
+    header #login #login-links{
+        float:none;
+        margin:3px 75px 0 0;
+        text-align: center;
+    }
+
+   
+}
+
+
+/* Standard Smartphones/iPhones (landscape) ----------- */
+@media only screen
+and (max-width : 500px)
+and (min-width : 400px){
+
+    #container{
+        width:470px !important;
+    }
+
+    #outside{
+        width:460px;
+        min-height:200px;
+    }
+
+
+    h1{
+        font-size:24px;
+    }
+
+    header #login input[type="text"],header #login input[type="password"]{
+       width:130px;
+    }
+
+     header #login{
+        clear:both;
+        float:none !important;
+        height:60px;
+        overflow:hidden;
+        margin-left:10% !important;
+    }
+
+    header #logout .logout-left, header #logout .logout-mid{
+        display:none;
+    }
+
+    nav#main{display:none;}
+
+    #select-nav{
+        display:block;
+        text-align: center;
+    }
+
+    #select-nav select{
+        width:290px;
+    }
+/*
+    nav#main{
+        overflow:hidden;
+        min-height:290px !important;
+        margin-left:2%;
+    }
+
+    nav#main ul li{
+        float:none;
+        display:block;
+        text-align:center;
+        border:none;
+    }
+
+    nav#main ul li a{
+        padding:5px;
+        background:#ccc;
+        margin:5px 0 5px 0;
+        min-width: 150px;
+        display:block;
+    }
+
+     nav#main ul li a:hover{
+        background:#666;
+        color:#fff;
+     }
+*/
+
+    footer #footer-right{
+        display:none;
+    }
+
+    footer #footer-left{
+        float:none;
+        text-align: center;
+    }
+ 
+}
+
+
+
+/* Large Smartphones/Razr Maxx (portrait) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+
+    #container{
+        width:360px !important;
+    }
+
+    #outside{
+        width:330px;
+        min-height:200px;
+    }
+
+    h1{
+        font-size:19px;
+    }
+
+    h3{
+        font-size:16px;
+    }
+
+    header{
+        height:145px;
+    }
+
+    header #login {
+        color:#000;
+        margin-top:30px;
+    }
+
+    header #login a{
+        color:#000 !important;
+    }
+  
+    header #login input[type="text"],header #login input[type="password"]{
+       width:90px;
+       margin-right:4px;
+    }
+
+    header #login-links{
+        font-size:11px;
+  
+    }
+
+    header #login-links span{
+        display:none;
+    }
+
+    header #logout .logout-left, header #logout .logout-mid{
+        display:none;
+    }
+
+    #select-nav{
+        display:block;
+        text-align: center;
+        
+    }
+
+     #select-nav select{
+        width:250px;
+     }
+
+     nav#main{
+        display:none;
+     }
+
+    nav#main{
+        overflow:hidden;
+        min-height:290px !important;
+        margin-left:2%;
+        background:none;
+        text-align: center;
+    }
+
+     nav#main ul{
+        margin-left:30px;
+        padding-left:20px;
+     }
+
+    nav#main ul li{
+        float:none;
+        display:block;
+        text-align:center;
+        border:none;
+    }
+
+    nav#main ul li a{
+        padding:5px;
+        background:#ccc;
+        margin:5px 0 5px 0;
+        min-width: 140px;
+        display:block;
+    }
+
+     nav#main ul li a:hover{
+        background:#666;
+        color:#fff;
+     }
+
+    footer #footer-right{
+        display:none;
+    }
+
+    footer #footer-left{
+        float:none;
+        text-align: center;
+    }
+    
+}
+
+
+/* Standard Smartphones/iPhones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+    #container{
+        width:275px !important;
+    }
+
+    #outside{
+        width:240px;
+        min-height:200px;
+    }
+
+    h1{
+        font-size:18px;
+    }
+
+    input[type='text']{
+        width:160px;
+    }
+
+     header{
+        height:auto;overflow:hidden;
+    }
+
+    header #login {
+        margin-top:25px;
+        height:120px;
+        width:100%;
+    }
+
+    header #login input{
+        display:block;
+        margin-bottom:10px;
+    }
+
+    header #login input[type="text"], header #login input[type="password"]{
+        width:190px !important;
+   }
+
+   header #logout{
+        margin:25px 80px 10px 0;
+        width:100%;
+    }
+
+    header #logoutinput{
+        display:block;
+        margin-bottom:10px;
+    }
+
+    header #logout .logout-left, header #logout .logout-mid{
+        display:none;
+    }
+
+     #select-nav{
+        display:block;
+        text-align: center;
+        margin-left:7%;
+    }
+
+      #select-nav select{
+        width:200px;
+      }
+
+     nav#main{
+        display:none;
+     }
+
+    nav#main{
+        overflow:hidden;
+        min-height:290px !important;
+        margin-left:5%;
+        background:none;
+    }
+
+    nav#main ul li{
+        float:none;
+        display:block;
+        text-align:center;
+        border:none;
+    }
+
+    nav#main ul li a{
+        padding:5px;
+        background:#ccc;
+        margin:5px 0 5px 0;
+        min-width: 150px;
+        display:block;
+    }
+
+     nav#main ul li a:hover{
+        background:#666;
+        color:#fff;
+     }
+
+   footer{
+        min-height:180px;
+    }
+
+    footer #footer-right{
+        display:none;
+    }
+
+    footer #footer-left{
+        float:none;
+        text-align: center;
+    }
+
+    footer nav{
+        overflow:hidden;
+        background:#dddcdc;
+        padding:0;
+        
+    }
+
+    footer nav ul li{
+        float:none;
+        padding:5px 0;
+        border-bottom:1px #666 dashed;
+    }
+
+    footer nav a{
+        color:#666;
+        text-decoration: none;
+    }
+
+    /* The following wont work in custom.css for some reason */
+    #groups #search-groups input[type="text"]{
+        width:140px !important;
+   }
+
+    #groups .group-listing img{
+        display:none;
+     }
+
+    #photo-galleries .gallery img{
+        width:240px !important;
+        overflow:hidden;
+        margin-bottom:30px;
+    }
+
+    #photo-galleries .gallery h4,#photo-galleries .gallery p{
+        display:none;
+    }
+     
+     #groups a.main-button{
+       
+        margin-right:15%;
+        margin-bottom:30px !important;
+   }
+     
+}
+
+
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

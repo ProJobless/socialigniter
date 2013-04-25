@@ -1,0 +1,254 @@
+#welcome-image-wrap{
+    width:1260px;
+    margin:10px auto 0 auto;
+    position:relative;
+    overflow:hidden;
+    background:url(../images/main_bg.jpg) no-repeat top center;
+    height:650px;
+}
+
+#welcome-form{
+    background:url(../images/form_bg.png) no-repeat;
+    overflow:auto;
+    float:right;
+    width:395px;
+    height:500px;
+    padding:20px;
+    margin-top:30px;
+}
+
+#welcome-form form label{
+    font-weight:bold;
+    font-size:16px;
+    display:inline-block;
+    width:140px;
+    margin-bottom:15px;
+}
+
+#welcome-form form input[type="submit"]{
+    margin:20px 0 0 60px;
+}
+
+#welcome-form p{
+    margin:0 0 20px 0;
+    font-weight:bold;
+    font-size:15px;
+}
+
+#welcome-text{
+    float:left;
+    width:500px;
+}
+
+/* Register Pages */
+#register1 h3,#register2 h3{
+    color:#0b77bb;
+    margin:20px 0 5px 0;
+    border-bottom:#0b77bb solid 1px;
+}
+
+#progress-bar{
+    width:890px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+}
+
+#register1 .skip,#register2 .skip{
+    color:green;
+}
+
+#register1 #form-half{
+    float:left;
+    overflow:hidden;
+    width:390px;
+    padding-top:20px;
+    margin-left:40px;
+}
+
+#register1 input[type="text"],#register textarea{
+    width:240px;
+}
+
+#register1 input[type="submit"]{
+    float:right;
+    margin-right:50px;
+}
+
+#register1 img.info{
+    margin:0 0 0 5px;
+}
+
+#register3{
+    text-align: center;
+    line-height:2.1em;
+}
+
+#register3 #container{
+    margin-top: 20px;
+}
+
+#register3 .act-email{
+    font-weight: bold;
+}
+
+/* iPads/Tablets (portrait & landscape) ----------- */
+@media only screen
+and (max-width : 768px){
+
+   #welcome-text,#welcome-form{
+        display:block;
+        float:none;
+        margin-left:24%;
+    }
+
+    #welcome-form{
+        margin-top:0;
+    }
+
+    #welcome-text{
+        text-align: center;
+        margin-left:17%;
+    }
+
+    #progress-bar{
+        display:none;
+    }
+
+    #register1 input[type="submit"]{
+        float:right;
+        margin-right:0;
+    }
+    
+}
+
+
+
+/* Large Smartphones/Razr Maxx (landscape) ----------- */
+@media only screen
+and (max-width : 600px)
+and (min-width : 481px){
+    #welcome-image-wrap{
+        width:590px !important;
+    }
+
+    #welcome-text,#welcome-form{
+        display:block;
+        float:none;
+        margin-left:17%;
+    }
+
+    #welcome-text{
+        text-align: center;
+        margin-left:8%;
+    }
+   
+}
+
+
+/* Standard Smartphones/iPhones (landscape) ----------- */
+@media only screen
+and (max-width : 500px)
+and (min-width : 400px){
+
+    #welcome-image-wrap{
+        width:470px !important;
+    }
+
+    #welcome-text,##welcome-form{
+        display:block;
+        float:none;
+        margin-left:10%;
+    }
+
+    #welcome-text{
+        text-align: center;
+        margin-left:0;
+    }
+
+   
+}
+
+
+
+/* Large Smartphones/Razr Maxx (portrait) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+
+    #welcome-image-wrap{
+        width:400px !important;
+    }
+    
+    #welcome-form{
+        display:block;
+        float:none;
+        margin-left:1%;
+    }
+
+    #welcome-text{
+        text-align: center;
+        margin-left:0;
+        width:400px;
+    }  
+}
+
+
+/* Standard Smartphones/iPhones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+    #container{
+        width:275px !important;
+    }
+
+    #welcome-image-wrap{
+        width:250px !important;
+        height:700px;
+        overflow-x:hidden;
+        background:none;
+    }
+
+    #welcome-text h3{
+        display:none;
+    }
+
+    #welcome-form{
+        background:none;
+        height:600px !important;
+        display:block;
+        float:none;
+        margin-left:0;
+        margin-bottom:30px !important;
+        overflow: hidden;
+    }
+
+    #welcome-form label{
+        font-size:14px !important;
+        display:block !important;
+        margin:5px 0 3px 0 !important;
+    }
+
+    #welcome-text{
+        text-align: center;
+        margin-left:0;
+        width:250px;
+    }
+
+    #register1 #form-half{
+        margin-left:0;
+    }
+
+    #register1 #form-half input[type="text"]{
+        max-width:190px;
+    }
+     
+}
+
+
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}
