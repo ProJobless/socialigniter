@@ -4,7 +4,7 @@
     position:relative;
     overflow:hidden;
     background:url(../images/main_bg.jpg) no-repeat top center;
-    height:650px;
+    min-height:650px;
 }
 
 #welcome-form{
@@ -41,24 +41,23 @@
 }
 
 /* Register Pages */
-#register1 h3,#register2 h3{
+#register-optional h3,#register2 h3{
     color:#0b77bb;
     margin:20px 0 5px 0;
     border-bottom:#0b77bb solid 1px;
 }
 
 #progress-bar{
-    width:890px;
-    margin:0 auto;
+    margin-left:2%;
     position:relative;
     overflow:hidden;
 }
 
-#register1 .skip,#register2 .skip{
+#register-optional .skip,#register2 .skip{
     color:green;
 }
 
-#register1 #form-half{
+#register-optional #form-half{
     float:left;
     overflow:hidden;
     width:390px;
@@ -66,16 +65,16 @@
     margin-left:40px;
 }
 
-#register1 input[type="text"],#register textarea{
+#register-optional input[type="text"],#register textarea{
     width:240px;
 }
 
-#register1 input[type="submit"]{
+#register-optional input[type="submit"]{
     float:right;
     margin-right:50px;
 }
 
-#register1 img.info{
+#register-optional img.info{
     margin:0 0 0 5px;
 }
 
@@ -115,7 +114,7 @@ and (max-width : 768px){
         display:none;
     }
 
-    #register1 input[type="submit"]{
+    #register-optional input[type="submit"]{
         float:right;
         margin-right:0;
     }
@@ -203,7 +202,7 @@ and (max-width : 320px) {
 
     #welcome-image-wrap{
         width:250px !important;
-        height:700px;
+        min-height:700px;
         overflow-x:hidden;
         background:none;
     }
@@ -234,11 +233,11 @@ and (max-width : 320px) {
         width:250px;
     }
 
-    #register1 #form-half{
+    #register-optional #form-half{
         margin-left:0;
     }
 
-    #register1 #form-half input[type="text"]{
+    #register-optional #form-half input[type="text"]{
         max-width:190px;
     }
      

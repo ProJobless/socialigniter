@@ -72,6 +72,8 @@ textarea{
     border-radius: 5px;
     padding:3px;
     border:1px solid #ccc;
+    width:220px;
+    height:50px;display:block;
 }
     
 select{
@@ -297,7 +299,7 @@ and (max-width : 768px){
         margin-left:30px;
     }
 
-    header #login input[type="text"],header #login input[type="password"]{
+    header #login input#login-email,header #login input#login-password{
        width:150px;
     }
 
@@ -372,7 +374,7 @@ and (min-width : 400px){
         font-size:24px;
     }
 
-    header #login input[type="text"],header #login input[type="password"]{
+    header #login input#login-email,header #login input#login-password{
        width:130px;
     }
 
@@ -474,7 +476,7 @@ and (max-width : 480px) {
         color:#000 !important;
     }
   
-    header #login input[type="text"],header #login input[type="password"]{
+    header #login input#login-email,header #login input#login-password{
        width:90px;
        margin-right:4px;
     }
@@ -586,7 +588,7 @@ and (max-width : 320px) {
         margin-bottom:10px;
     }
 
-    header #login input[type="text"], header #login input[type="password"]{
+    header #login input#login-email, header #login input#login-password{
         width:190px !important;
    }
 

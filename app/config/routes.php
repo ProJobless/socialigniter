@@ -38,8 +38,11 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "user";
 $route['404_override'] = '';
+$route['register_optional'] = "user/register_optional";
+$route['register_invite'] = "user/register_invite";
+$route['register_activation'] = "user/register_activation";
 
 
 /* End of file routes.php */

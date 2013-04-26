@@ -1069,6 +1069,14 @@ a.noti-messages{
     list-style: square;
 }
 
+p.error{
+    padding:5px;
+    margin-bottom:5px;
+    background:#ffc3c3;
+    border-top:#c10000 2px solid;
+    border-bottom:#c10000 2px solid;
+}
+
 
 
 /* iPads/Tablets (portrait & landscape) ----------- */

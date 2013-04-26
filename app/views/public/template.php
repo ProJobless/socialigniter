@@ -85,7 +85,7 @@
         
     <div id="outside">
         <div id="container">
-        	<?php if($show_sidebar == TRUE) : ?>
+        	<?php if(isset($show_sidebar) && $show_sidebar == TRUE) : ?>
             	<div id="main-col">
             <?php else : ?>
             	<div id="main-col-100">
@@ -94,7 +94,7 @@
 					<?php $this->load->view($main_content); ?>
 				</div><!--main-col end-->
 
-<?php if($show_sidebar == TRUE) : ?>
+<?php if(isset($show_sidebar) && $show_sidebar == TRUE) : ?>
 <!--Sidebar-->
             <aside>
                 <div id="notifications-box" class="side-module">
