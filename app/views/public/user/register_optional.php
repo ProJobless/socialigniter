@@ -1,17 +1,28 @@
+ <?php $reg_id = $this->input->get('reg_id'); ?>
  <div id="register-optional">
  <div id="progress-bar">
 <img src="<?php echo base_url(); ?>assets/images/step1done.png" alt="Almost Done" />
 </div>
 <!--Display Errors-->
 <?php echo validation_errors('<p class="error">'); ?>
+<?php if($this->session->flashdata('images_folder')) : ?>
+    <?php echo '<p class="error">' .$this->session->flashdata('images_folder') . '</p>'; ?>
+<?php endif; ?>
+<?php if($this->session->flashdata('email_yes_send')) : ?>
+    <?php echo '<p class="success_verybig">' .$this->session->flashdata('email_yes_send') . '</p>'; ?>
+<?php endif; ?>
+<?php if($this->session->flashdata('email_no_send')) : ?>
+    <?php echo '<p class="error_big">' .$this->session->flashdata('email_no_send') . '</p>'; ?>
+<?php endif; ?>
+    <?php if($this->session->flashdata('images_avatars_folder')) : ?>
+    <?php echo '<p class="error">' .$this->session->flashdata('images_avatars_folder') . '</p>'; ?>
+    <?php endif; ?>
  <h2>Optional Info</h2>
                 <p>This info is optional but it helps us and others get to know you better. It will also count towards your profile completeness</p>
                 <p><a class="skip" href="<?php echo base_url(); ?>register_invite">Skip For Now</a>
-                    <?php echo form_open_multipart('register_optional'); ?>
-                     <?php echo form_hidden('reg_id', $this->session->flashdata('reg_id')); ?>
+                    <?php echo form_open('register_optional'); ?>
+                     <?php echo form_hidden('reg_id', $reg_id); ?>
                         <div id="form-half">
-                             <?php echo form_label('Upload Avatar', 'avatar'); ?>
-                             <?php echo form_upload('avatar'); ?><br /><br />
                             
                             <?php echo form_label('Relationship Status', 'relationship_status'); ?><br />
                             <?php $options = array(
@@ -84,7 +95,9 @@
                         </div><!--form-half end-->
                         <div class="clr"></div>
                         <br />
-                        <input class="med-blue-btn" type="submit" value="Next" />
+                        <input name="next" class="med-blue-btn" type="submit" value="Next" />
 
                     <?php echo form_close(); ?>
+                    <div class="clr"></div>
+                    <?php // echo 'Register ID: ' .$reg_id; //DEBUG ?>
                 </div><!--register1-->

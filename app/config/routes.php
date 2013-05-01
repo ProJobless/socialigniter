@@ -43,6 +43,8 @@ $route['404_override'] = '';
 $route['register_optional'] = "user/register_optional";
 $route['register_invite'] = "user/register_invite";
 $route['register_activation'] = "user/register_activation";
+$route['register_avatar'] = "user/register_avatar";
+$route['login'] = "user/login";
 
 
 /* End of file routes.php */

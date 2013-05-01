@@ -13,4 +13,5 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/custom.css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/site.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/wall.js"></script>
 </head>

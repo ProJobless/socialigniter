@@ -1,3 +1,12 @@
+#welcome-page #errors{
+    width:420px;
+    position:absolute;
+    top:40px;
+    left:20px;
+    padding:15px;
+    background:url(../images/errors_bg.png) repeat-x;
+}
+
 #welcome-image-wrap{
     width:1260px;
     margin:10px auto 0 auto;
@@ -26,13 +35,17 @@
 }
 
 #welcome-form form input[type="submit"]{
-    margin:20px 0 0 60px;
+    margin:5px 0 0 60px;
 }
 
 #welcome-form p{
     margin:0 0 20px 0;
     font-weight:bold;
     font-size:15px;
+}
+
+#welcome-form input.light-value{
+    color:#C0C0C0;
 }
 
 #welcome-text{
@@ -78,18 +91,46 @@
     margin:0 0 0 5px;
 }
 
-#register3{
+#register-activation{
     text-align: center;
     line-height:2.1em;
 }
 
-#register3 #container{
+#register-activation #container{
     margin-top: 20px;
 }
 
-#register3 .act-email{
+#register-activation .act-email{
     font-weight: bold;
 }
+
+
+#register-avatar .avatar-left{
+    float:left;
+    width:30%;
+    margin-right:20px;
+    text-align: center;
+}
+#register-avatar .avatar-mid{
+    float:left;
+    width:20%;
+    margin-right:20px;
+}
+#register-avatar .avatar-right{
+    float:left;
+    width:45%;
+}
+
+#avatar-btn{
+    margin-top:20px;
+}
+
+#avatar-submit-btn{
+    margin:25px 30px 0 0;
+    float:right;
+}
+
+
 
 /* iPads/Tablets (portrait & landscape) ----------- */
 @media only screen

@@ -48,6 +48,17 @@ a.main-button:hover{
     background:#0b77bb;
 }
 
+input.submit-avatar{
+    background: url(../images/upload_bg.png) no-repeat;
+    width:161px;
+    height:40px;
+    overflow:hidden;
+    border:0;
+    padding:0 26px 0 0;
+    color:#fff;
+    margin-top:10px;
+}
+
 p.name{
     font-weight: bold;
 }
@@ -203,6 +214,7 @@ a.noti-messages{
 }
 
 #wall .wall-image img{
+    width:75px;
     border-radius:15px;
     border:1px #ccc solid;
 }
@@ -240,6 +252,7 @@ a.noti-messages{
     padding:5px;
     width:100%;
     font-size:85%;
+    margin-bottom:5px;
 }
 
 #wall .wall-comment{
@@ -264,12 +277,14 @@ a.noti-messages{
     display:block;
     font-size:80%;
     width:100%;
-    margin:5px 5px 10px 5px;
+    overflow:auto;
+    margin:5px 5px 5px 5px;
 }
 
 #wall .comment-form input[type="text"]{
-    width:85%;
+    width:80%;
     border-radius:0;
+    margin-left:5px;
 }
 
 #wall #show-more-posts{
@@ -284,6 +299,7 @@ a.noti-messages{
     font-weight:bold;
     text-align: center;
     margin-left:5px;
+    margin-top:15px;
 }
 
 #wall #show-more-posts:hover{
@@ -1070,14 +1086,99 @@ a.noti-messages{
 }
 
 p.error{
-    padding:5px;
-    margin-bottom:5px;
-    background:#ffc3c3;
-    border-top:#c10000 2px solid;
-    border-bottom:#c10000 2px solid;
+    padding:12px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/error_bg.png) no-repeat;
+    color:#b90000;
+}
+
+p.error-right{
+    padding:12px 0 15px 34px;
+    margin-bottom:0px;
+    background:url(../images/error_bg.png) no-repeat;
+    color:#b90000;
+    float:right;
+    width:410px;
 }
 
 
+p.error_big{
+    padding:14px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/error_bg_big.png) no-repeat;
+    color:#b90000;
+}
+
+p.success{
+    padding:12px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/success_bg.png) no-repeat;
+
+}
+
+p.success-right{
+    padding:12px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/success_bg.png) no-repeat;
+    float:right;
+    width:410px;
+
+}
+
+p.success_big{
+    padding:14px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/success_bg_big.png) no-repeat;
+}
+
+p.success_verybig{
+    padding:16px 0 15px 36px;
+    margin-bottom:10px;
+    background:url(../images/success_bg_verybig.png) no-repeat;
+}
+
+p.info{
+    padding:12px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/info_bg.png) no-repeat;
+}
+
+p.info_big{
+    padding:14px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/info_bg_big.png) no-repeat;
+}
+
+p.notice{
+    padding:12px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/notice_bg.png) no-repeat;
+}
+
+p.notice_big{
+    padding:14px 0 15px 34px;
+    margin-bottom:10px;
+    background:url(../images/notice_bg_big.png) no-repeat;
+}
+
+#login-page{
+    padding:20px;
+    margin:40px auto;
+    width:400px;
+    background:#f4f4f4;
+    border-radius:10px;
+    border:#ccc 1px solid;
+}
+
+#login-page label{
+    display:inline-block;
+    width:130px;
+}
+
+span.comment-name{
+    font-style: italic;
+    color:#ccc;
+}
 
 /* iPads/Tablets (portrait & landscape) ----------- */
 @media only screen
