@@ -72,7 +72,7 @@
                             <?php echo form_input('facebook',set_value('facebook')); ?>
                           
                             <br /><br />
-                            <?php echo form_label('Twitter', 'twitter'); ?><br />
+                            <?php echo form_label('Twitter Username', 'twitter'); ?><br />
                             <?php echo form_input('twitter',set_value('twitter')); ?>
                           
                         </div><!--form-half end-->

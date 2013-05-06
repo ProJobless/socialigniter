@@ -1,7 +1,9 @@
-<script>
-    var user_id = "<?php echo $this->session->userdata('user_id'); ?>";
-    var base_url = "<?php echo base_url(); ?>";
-</script>
+<?php if($this->session->flashdata('wall_error')) : ?>
+    <?php echo '<p class="error">' .$this->session->flashdata('wall_error') . '</p>'; ?>
+<?php endif; ?>
+<?php if($this->session->flashdata('wall_post_removed')) : ?>
+    <?php echo '<p class="success">' .$this->session->flashdata('wall_post_removed') . '</p>'; ?>
+<?php endif; ?>
 <div id="speakbox">
     <div class="heading-left">
          <h3>Speak Your Mind</h3>
@@ -22,15 +24,19 @@
         <!--Wall Post-->
         <div class="wall-post">
             <img class="post-arrow" src="<?php echo base_url(); ?>assets/images/post_arrow.png" />
-            <?php foreach($profiles as $profile) : ?>
-                <?php if($profile->user_id == $post->user_id) : ?>
-                    <a href="#">
-                        <div class="wall-image"><img src="<?php echo base_url(); ?>assets/images/avatars/<?php echo $profile->avatar; ?>" alt="member" /></div><!--wall-image-->
+            <?php foreach($users as $user) : ?>
+                <?php if($user->id == $post->user_id) : ?>
+                    <a href="<?php echo base_url(); ?>profile/view/<?php echo get_nickname_from_id($post->user_id); ?>">
+                        <div class="wall-image"><img src="<?php echo base_url(); ?>assets/images/avatars/<?php echo $user->avatar; ?>" alt="member" /></div><!--wall-image-->
                     </a>
                 <?php endif; ?>
             <?php endforeach; ?>
             <div class="wall-content">
-                <h5><a href="#"><?php echo $post->first_name . ' ' . $post->last_name; ?></a> Says:</h5>
+                <h5><a href="<?php echo base_url(); ?>profile/view/<?php echo get_nickname_from_id($post->user_id); ?>"><?php echo $post->first_name . ' ' . $post->last_name; ?></a> Says:
+                    <?php if($post->user_id == $this->session->userdata('user_id')) : ?>
+                        <span class="deletex"><a href="<?php echo base_url(); ?>main/remove_post/<?php echo $post->id. '/' .$post->user_id; ?>">X Delete</a></span></h5>
+                    <?php endif; ?>
+                    <div class="clr"></div>
                 <p><?php echo $post->body; ?></p>
             </div><!--wall-content end-->
             <div class="clr"></div>
@@ -44,17 +50,17 @@
                 <?php foreach($wall_post_comments as $comment) : ?>
                     <?php if($comment->post_id == $post->id) : ?>
                         <div class="wall-comment">
-                            <?php foreach($profiles as $profile) : ?>
-                                <?php if($profile->user_id == $comment->user_id) : ?>
+                            <?php foreach($users as $user) : ?>
+                                <?php if($user->id == $comment->user_id) : ?>
                                     <div class="comment-image">
-                                        <a href="#">
-                                            <img src="<?php echo base_url(); ?>assets/images/avatars/<?php echo $profile->avatar; ?>" alt="member" />
+                                        <a href="<?php echo base_url(); ?>profile/view/<?php echo get_nickname_from_id($comment->user_id); ?>">
+                                            <img src="<?php echo base_url(); ?>assets/images/avatars/<?php echo $user->avatar; ?>" alt="member" />
                                         </a>
                                     </div><!--comment-image end-->
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <div class="comment-content">
-                                <?php echo $comment->comment_body; ?> <span class="comment-name"> <a href="#"> - <?php echo $comment->first_name . ' ' .$comment->last_name; ?></a></span>
+                                <?php echo $comment->comment_body; ?> <span class="comment-name">  <a href="<?php echo base_url(); ?>profile/view/<?php echo get_nickname_from_id($comment->user_id); ?>"> - <?php echo $comment->first_name . ' ' .$comment->last_name; ?></a></span>
                             </div><!--comment-content end-->
                         </div><!--wall-comment end-->
                         <div class="clr"></div>

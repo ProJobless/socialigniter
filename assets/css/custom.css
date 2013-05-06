@@ -203,7 +203,7 @@ a.noti-messages{
 
 #wall .wall-post img.post-arrow{
     position:absolute;
-    top:35px;
+    top:27px;
     left:86px;
     z-index: 200;
 }
@@ -236,6 +236,9 @@ a.noti-messages{
     padding-left:20px;
 }
 
+#wall .wall-content h5{
+    padding-bottom:4px;
+}
 
 #wall .like-this{
     padding:5px;
@@ -281,7 +284,7 @@ a.noti-messages{
     margin:5px 5px 5px 5px;
 }
 
-#wall .comment-form input[type="text"]{
+#wall .comment-form input[type="text"],#wall .comment-form input[type="email"]{
     width:80%;
     border-radius:0;
     margin-left:5px;
@@ -617,6 +620,8 @@ a.noti-messages{
     position:absolute;
     top:20px;
     right:0;
+    width:50px;
+    height:45px;  
 }
 
 #blog-posts #blog-post img.main-image{
@@ -680,6 +685,15 @@ a.noti-messages{
     right:0;
 }
 
+#single-blog-post .avatar-image img{
+    border:3px solid #0b77bb;
+    position:absolute;
+    top:20px;
+    right:0;
+    width:50px;
+    height:45px;
+}
+
 #single-blog-post h2{
     float:left;
     width:300px;
@@ -700,13 +714,14 @@ a.noti-messages{
 
 #single-blog-post #comment-form label{
     display:inline-block;
-    width:150px;
-    margin-bottom:1.8em;
+    width:140px;
+    margin:10px 0 5px 0;
 }
 
 #single-blog-post #comment-form textarea{
     width:300px;
     height:70px;
+
 }
 
 /* Comments */
@@ -1178,6 +1193,10 @@ p.notice_big{
 span.comment-name{
     font-style: italic;
     color:#ccc;
+}
+
+span.deletex{
+    float:right;
 }
 
 /* iPads/Tablets (portrait & landscape) ----------- */

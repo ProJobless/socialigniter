@@ -18,6 +18,9 @@ class MY_Controller extends CI_Controller{
             $this->load->model('Settings_model');
             //Load the wall model
             $this->load->model('Wall_model');
+            //Load the blog model
+            $this->load->model('Blog_model');
+
 
            //Loop to get all settings in the "globals" table
             foreach ($this->Settings_model->get_global_settings() as $result){
@@ -26,6 +29,8 @@ class MY_Controller extends CI_Controller{
 
             //Get modules
             $global_data['modules'] = $this->Module_model->get_modules();
+            //Initialize page_modules array
+            $global_data['page_modules'] = array();
             
             //Load into all views loaded by this controller
             $this->load->vars($global_data);
@@ -47,5 +52,23 @@ class Public_Controller extends MY_Controller{
     public function __construct() {
         parent::__construct();
         
+    }
+
+    public function validate_user(){
+        //Validate user
+        if($this->session->userdata('logged_in') != true){
+            //Set error
+            $this->session->set_flashdata('access_denied', 'Sorry, you must be logged in to access this area');
+            redirect(); 
+        }
+    }
+
+    public function is_logged_in(){
+        //Validate user
+        if($this->session->userdata('logged_in') != true){
+           return false;
+        } else {
+            return true;
+        }
     }
 }

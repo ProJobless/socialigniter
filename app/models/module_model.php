@@ -9,7 +9,7 @@ class Module_model extends CI_Model{
         return $query->result();
     }
     
-    //Get module
+    //Get module by id
     public function get_module($mod_id){
         $this->db->where('id', $mod_id);
         $query = $this->db->get('modules');
@@ -20,6 +20,20 @@ class Module_model extends CI_Model{
     public function get_all_modules(){
         $this->db->order_by('order');
         $query = $this->db->get('modules');
+        return $query->result();
+    }
+    
+    //Get module by page
+    public function get_page_modules($page){
+        $this->db->select('module_id');
+        $this->db->where('page',$page);
+        $query = $this->db->get('modules_to_pages');
+        return $query->result();
+    }
+    
+    //Get pages to modules relationships
+    public function get_modules_to_pages(){
+        $query = $this->db->get('modules_to_pages');
         return $query->result();
     }
 

@@ -2,6 +2,39 @@
 //User Model
 class User_model extends CI_Model{
 
+    public function get_users($count = null){
+        if($count != null){
+            $this->db->limit($count);
+        }
+        $this->db->where('is_activated',1);
+        $this->db->where('is_banned',0);
+        $query = $this->db->get('users');
+        return $query->result();
+    }
+
+    public function get_user($user_id){
+        $this->db->where('id',$user_id);
+        $query = $this->db->get('users');
+        return $query->row();
+    }
+
+    public function get_id_from_nickname($nickname){
+        $this->db->select('id');
+        $this->db->where('nickname',$nickname);
+        $query = $this->db->get('users');
+        if($query->num_rows() != 1){
+            return FALSE;
+        }
+        return $query->row()->id;
+    }
+
+    public function get_nickname_from_id($user_id){
+        $this->db->select('nickname');
+        $this->db->where('id',$user_id);
+        $query = $this->db->get('users');
+        return $query->row()->nickname;
+    }
+
 	public function create_member($data){
 		$insert = $this->db->insert('users', $data);
 		return $insert;
@@ -44,9 +77,16 @@ class User_model extends CI_Model{
         }
     }
 
+    public function get_user_avatar($user_id){
+        $this->db->select('avatar');
+        $this->db->where('id',$user_id);
+        $query = $this->db->get('users');
+        return $query->row()->avatar;
+    }
+
    public function insert_avatar($reg_id,$data){
         $this->db->where('reg_id', $reg_id);
-        $this->db->update('profiles', $data); 
+        $this->db->update('users', $data); 
         return true;
     }
 
@@ -88,10 +128,11 @@ class User_model extends CI_Model{
         }
     }
 
-    public function get_user_avatar($user_id){
-        $this->db->select('avatar');
-        $this->db->where('user_id',$user_id);
-        $query = $this->db->get('profiles');
-        return $query->row()->avatar;
+    public function get_user_data($user_id){
+            $this->db->select('user_data');
+            $query =$this->db->get('ci_sessions');
+            return $query->result();
     }
+
+    
 }
